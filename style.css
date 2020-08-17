@@ -5,7 +5,7 @@ body{
 	/*background-image: linear-gradient(to right top, #004dff, #0091ff, #00b9ff, #00d7b0, #12eb4c);*/
 }
 
-ul{
+#list{
 	background: #e6e6e6;
 	color: white;
 	font-family: sans-serif;
@@ -29,8 +29,37 @@ ul{
 	border-radius: 10px;
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-.button:hover{
+.button,.submit:hover{
 	background: #004dff;
 	color: white;
 	
+}
+
+#entry{
+	background: #e6e6e6;
+	color: black;
+	width: 300px;
+}
+
+.submit{
+	background: white;
+	color: black;
+	font-family: 'Nunito',sans-serif;
+	font-size: 100%;
+	margin: 10px 50px;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.search{
+	background: #e6e6e6;
+	color: black;
+	padding: 20px;
+	width: 500px;
+	margin: 100px auto;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,2);
 }
