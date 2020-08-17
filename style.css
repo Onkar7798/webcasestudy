@@ -1,0 +1,36 @@
+body{
+	/*background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 25%, rgba(0,212,255,1) 83%);*/
+	background: #007FFF;
+	/*background-image: linear-gradient(to right top, #004dff, #0091ff, #00b9ff, #00d7b0, #12eb4c);*/
+}
+
+ul{
+	background: #e6e6e6;
+	color: white;
+	font-family: sans-serif;
+	align-self: center;
+	width: 500px;
+	height: 500px;
+	margin: 100px auto;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,2);
+
+}
+.button{
+	background: white;
+	color: black;
+	font-family: 'Nunito',sans-serif;
+	font-size: 200%;
+	margin: 50px 20px;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.button:hover{
+	background: #004dff;
+	color: white;
+	
+}
