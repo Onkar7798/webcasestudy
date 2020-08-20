@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
+<head>
+	<title>Student Dashboard</title>
+</head>
+<body>
+	<!-- {%for x in cont:%}
+		<p>{{x}}</p>
+	{%endfor%} -->
+	<form action="" method="post">
+	<ul id="list" type="none" align="center">
+		<li><input type="submit" name="add" value="Add Student" class="button"></li>
+		<li><input type="submit" name="search" value="Search Student" class="button"></li>
+		<li><input type="submit" name="display" value="Display all Students" class="button"></li>
+	</ul>
+	</form>
+</body>
+</html>
