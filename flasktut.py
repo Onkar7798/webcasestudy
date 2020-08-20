@@ -1,4 +1,6 @@
 from flask import *
+import csv
+
 
 app = Flask(__name__)
 
@@ -7,8 +9,16 @@ def index():
 	return render_template("index.html")
 
 
-@app.route("/add")
+@app.route("/add", methods=["POST", "GET"])
 def add():
+	if request.method == "POST":
+		result = list(request.form.values());
+		#return render_template("add-student.html", result=result)
+		split = result[3].split('-')
+		result[3] = split[2]+"-"+split[1]+"-"+split[0]
+		with open('students.csv', 'a', newline='\n') as csv_file:
+			csv_writer = csv.writer(csv_file)
+			csv_writer.writerow(result)
 	return render_template("add-student.html")
 
 @app.route("/search")

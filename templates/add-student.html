@@ -5,17 +5,17 @@
 	<title>Add A Student</title>
 </head>
 <body>
-	<form>
-		<ul id="entry" type="none" align="center">
+	<form action="" method="post">
+		<ul id="entry" type="none" align="left">
 			<li>Student Id</li>
-			<li><input type="text" name="name"></li>
+			<li><input type="text" name="id"></li>
 			<li>Student Name</li>
 			<li><input type="text" name="name"></li>
 			<li>Gender</li>
-			<li><input type="checkbox" name="Male">Male</li>
-			<li><input type="checkbox" name="Female">Female</li>
+			<li><input type="radio" name="gender" value="Male">Male</li>
+			<li><input type="radio" name="gender" value="Female">Female</li>
 			<li>Date of Birth</li>
-			<li><input type="Date" name="date"></li>
+			<li><input type="date" name="date"></li>
 			<li>City</li>
 			<li><input type="text" name="city"></li>
 			<li>State</li>
@@ -26,8 +26,9 @@
 			<li><input type="text" name="qual"></li>
 			<li>Stream</li>
 			<li><input type="text" name="stream"></li>
-			<li><button class="submit">Submit</button></li>
+			<li><input type="submit" class="button" value="submit"></li>
 		</ul>
 	</form>
+	{{result}}
 </body>
 </html>
