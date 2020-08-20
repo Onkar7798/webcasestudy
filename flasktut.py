@@ -2,21 +2,22 @@ from flask import *
 
 app = Flask(__name__)
 
-@app.route("/", methods=["POST", "GET"])
-def home():
-	if request.method == "POST":
-		req = list(request.form.values())
-		print(req)
-		if req[0] == "Add Student":
-			return render_template("add-student.html")
-		elif req[0] == "Search Student":
-			return render_template("search-student.html")
-		elif req[0] == "Display all Students":
-			return render_template("display-student.html")
-		else:
-			return render_template("index.html")
-	else:
-		return render_template("index.html")
+@app.route("/")
+def index():
+	return render_template("index.html")
+
+
+@app.route("/add")
+def add():
+	return render_template("add-student.html")
+
+@app.route("/search")
+def search():
+	return render_template("search-student.html")
+
+@app.route("/display")
+def display():
+	return render_template("display-student.html")
 
 # @app.route("/<param>")
 # def say(param):
