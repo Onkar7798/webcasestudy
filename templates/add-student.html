@@ -29,6 +29,13 @@
 				<li><input type="text" name="stream" required></li>
 				<li><input type="submit" class="submit" value="Submit"></li>
 			</form>
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for message in messages %}
+							<li>{{messages}}</li>
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
 				<li><button class="submit" onclick="window.location='/'">Home</button></li>
 		</ul>
 	</div>

@@ -19,6 +19,7 @@ def add():
 		with open('students.csv', 'a', newline='\n') as csv_file:
 			csv_writer = csv.writer(csv_file)
 			csv_writer.writerow(result)
+			flash("Student added to the Database!")
 	return render_template("add-student.html")
 
 @app.route("/search", methods=["POST", "GET"])
