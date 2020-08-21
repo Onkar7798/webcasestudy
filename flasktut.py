@@ -35,8 +35,10 @@ def search():
 					success = True
 		if not success:
 			flash(f"Student id: {id} not found, Please try again!", "info")
-			
-	return render_template("search-student.html")
+		keys = ['Student ID', 'Student Name', 'Gender', 'Date of Birth', 'City', 'State', 'Email ID', 'Qualification', 'Stream']	
+		result = dict(zip(keys, details))
+		return render_template("search-student.html", data=True, result=result)
+	return render_template("search-student.html", data=False, result="")
 
 @app.route("/display")
 def display():

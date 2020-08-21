@@ -18,6 +18,16 @@
 				{% endfor %}
 			{% endif %}
 		{% endwith %}
+		{% if data %}
+			{% for key,value in result.items() %}
+				<table border="1" class="table">
+					<tr>
+						<th>{{key}}</th>
+						<td>{{value}}</td>
+					</tr>
+				</table>
+			{% endfor %}
+		{% endif %}
 	</div>
 
 </body>
