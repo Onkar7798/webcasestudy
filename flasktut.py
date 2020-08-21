@@ -1,8 +1,9 @@
 from flask import *
 import csv
 
+keys = ['Student ID', 'Student Name', 'Gender', 'Date of Birth', 'City', 'State', 'Email ID', 'Qualification', 'Stream']
 app = Flask(__name__)
-app.secret_key = "qwerty"
+app.secret_key = "wubbalubbadubdub"
 
 @app.route("/")
 def index():
@@ -37,30 +38,17 @@ def search():
 				flash("Please Enter ID", "info")
 			else:
 				flash(f"Student ID: {id[0]} not found, Please try again!", "info")
-		else:
-			global keys
-			keys = ['Student ID', 'Student Name', 'Gender', 'Date of Birth', 'City', 'State', 'Email ID', 'Qualification', 'Stream']	
+		else:	
 			result = dict(zip(keys, details))
 			return render_template("search-student.html", data=True, result=result)
 	return render_template("search-student.html", data=False, result="")
 
 @app.route("/display")
 def display():
-	# with open('students.csv', 'a') as csv_file:
-	# 	csv_reader = csv.reader(csv_file)
-		
-	return render_template("display-student.html")
+	with open('students.csv', 'r') as csv_file:
+		csv_reader = csv.reader(csv_file)
+		return render_template("display-student.html", result=csv_reader, keys=keys)
 
-# @app.route("/<param>")
-# def say(param):
-# 	return f"Hi {param}"
-
-# @app.route("/admin")
-# def admin():
-# 	return redirect(url_for("say", param="admin!!"))
-# content=[]
-# for r in range(5):
-# 	content.append(input("Enter a value"))
 if __name__=="__main__":
 	app.run(debug=True)
 

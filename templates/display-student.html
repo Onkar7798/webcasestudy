@@ -5,6 +5,22 @@
 	<title>Display all Students</title>
 </head>
 <body>
-
+	<div id="list">
+		<table class="table-display" border="1">
+			<tr>
+				{% for i in keys %}
+					<th>{{i}}</th>
+				{% endfor %}
+			</tr>
+			{% for lines in result %}
+				<tr>
+					{% for value in lines %}
+						<td>{{value}}</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</table>
+		<button class="submit" onclick="window.location='/'">Home</button>
+	</div>
 </body>
 </html>
