@@ -37,9 +37,15 @@ body{
 }
 
 #entry{
+	font-family: sans-serif;
 	background: #e6e6e6;
 	color: black;
 	width: 300px;
+	align-self: center;
+	margin: 100px auto;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,2);
 }
 
 .submit{
@@ -56,6 +62,7 @@ body{
 }
 
 .search{
+	font-family: sans-serif;
 	background: #e6e6e6;
 	color: black;
 	padding: 20px;

@@ -5,28 +5,28 @@
 	<title>Add A Student</title>
 </head>
 <body>
-	<div id="entry" >
-		<ul type="none" align="left">
+	<div id="entry" align="left">
+		<ul type="none">
 			<form action="" method="post">
 				<li>Student Id</li>
-				<li><input type="text" name="id"></li>
+				<li><input type="text" name="id" required></li>
 				<li>Student Name</li>
-				<li><input type="text" name="name"></li>
+				<li><input type="text" name="name" required></li>
 				<li>Gender</li>
-				<li><input type="radio" name="gender" value="Male">Male</li>
-				<li><input type="radio" name="gender" value="Female">Female</li>
+				<li><input type="radio" name="gender" value="Male" required>Male</li>
+				<li><input type="radio" name="gender" value="Female" required>Female</li>
 				<li>Date of Birth</li>
-				<li><input type="date" name="date"></li>
+				<li><input type="date" name="date" required></li>
 				<li>City</li>
-				<li><input type="text" name="city"></li>
+				<li><input type="text" name="city" required></li>
 				<li>State</li>
-				<li><input type="text" name="state"></li>
+				<li><input type="text" name="state" required></li>
 				<li>Email Id</li>
-				<li><input type="text" name="email"></li>
+				<li><input type="text" name="email" required></li>
 				<li>Qualification</li>
-				<li><input type="text" name="qual"></li>
+				<li><input type="text" name="qual" required></li>
 				<li>Stream</li>
-				<li><input type="text" name="stream"></li>
+				<li><input type="text" name="stream" required></li>
 				<li><input type="submit" class="submit" value="Submit"></li>
 			</form>
 				<li><button class="submit" onclick="window.location='/'">Home</button></li>
