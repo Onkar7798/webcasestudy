@@ -20,7 +20,7 @@
 		{% endwith %}
 		{% if data %}
 			{% for key,value in result.items() %}
-				<table border="1" class="table">
+				<table class="table-stuff" >
 					<tr>
 						<th>{{key}}</th>
 						<td>{{value}}</td>
@@ -28,6 +28,7 @@
 				</table>
 			{% endfor %}
 		{% endif %}
+		<button class="submit" onclick="window.location='/'">Home</button>
 	</div>
 
 </body>

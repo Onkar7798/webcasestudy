@@ -1,7 +1,6 @@
 from flask import *
 import csv
 
-
 app = Flask(__name__)
 app.secret_key = "qwerty"
 
@@ -34,14 +33,22 @@ def search():
 					details = line
 					success = True
 		if not success:
-			flash(f"Student id: {id} not found, Please try again!", "info")
-		keys = ['Student ID', 'Student Name', 'Gender', 'Date of Birth', 'City', 'State', 'Email ID', 'Qualification', 'Stream']	
-		result = dict(zip(keys, details))
-		return render_template("search-student.html", data=True, result=result)
+			if id[0] == '':
+				flash("Please Enter ID", "info")
+			else:
+				flash(f"Student ID: {id[0]} not found, Please try again!", "info")
+		else:
+			global keys
+			keys = ['Student ID', 'Student Name', 'Gender', 'Date of Birth', 'City', 'State', 'Email ID', 'Qualification', 'Stream']	
+			result = dict(zip(keys, details))
+			return render_template("search-student.html", data=True, result=result)
 	return render_template("search-student.html", data=False, result="")
 
 @app.route("/display")
 def display():
+	# with open('students.csv', 'a') as csv_file:
+	# 	csv_reader = csv.reader(csv_file)
+		
 	return render_template("display-student.html")
 
 # @app.route("/<param>")

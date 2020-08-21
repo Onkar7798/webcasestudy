@@ -5,30 +5,32 @@
 	<title>Add A Student</title>
 </head>
 <body>
-	<form action="" method="post">
-		<ul id="entry" type="none" align="left">
-			<li>Student Id</li>
-			<li><input type="text" name="id"></li>
-			<li>Student Name</li>
-			<li><input type="text" name="name"></li>
-			<li>Gender</li>
-			<li><input type="radio" name="gender" value="Male">Male</li>
-			<li><input type="radio" name="gender" value="Female">Female</li>
-			<li>Date of Birth</li>
-			<li><input type="date" name="date"></li>
-			<li>City</li>
-			<li><input type="text" name="city"></li>
-			<li>State</li>
-			<li><input type="text" name="state"></li>
-			<li>Email Id</li>
-			<li><input type="text" name="email"></li>
-			<li>Qualification</li>
-			<li><input type="text" name="qual"></li>
-			<li>Stream</li>
-			<li><input type="text" name="stream"></li>
-			<li><input type="submit" class="submit" value="submit"></li>
+	<div id="entry" >
+		<ul type="none" align="left">
+			<form action="" method="post">
+				<li>Student Id</li>
+				<li><input type="text" name="id"></li>
+				<li>Student Name</li>
+				<li><input type="text" name="name"></li>
+				<li>Gender</li>
+				<li><input type="radio" name="gender" value="Male">Male</li>
+				<li><input type="radio" name="gender" value="Female">Female</li>
+				<li>Date of Birth</li>
+				<li><input type="date" name="date"></li>
+				<li>City</li>
+				<li><input type="text" name="city"></li>
+				<li>State</li>
+				<li><input type="text" name="state"></li>
+				<li>Email Id</li>
+				<li><input type="text" name="email"></li>
+				<li>Qualification</li>
+				<li><input type="text" name="qual"></li>
+				<li>Stream</li>
+				<li><input type="text" name="stream"></li>
+				<li><input type="submit" class="submit" value="Submit"></li>
+			</form>
+				<li><button class="submit" onclick="window.location='/'">Home</button></li>
 		</ul>
-	</form>
-	{{result}}
+	</div>
 </body>
 </html>
