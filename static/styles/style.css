@@ -93,5 +93,36 @@ body{
 }
 
 .table-display{
+	border-collapse: collapse;
+	color: black;
+  	margin: 25px 0;
+	font-size: 90%;
+	min-width: 400px;
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
 
+.table-display th{
+  background-color: #007fff;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-display th,
+.table-display td {
+  padding: 12px 15px;
+}
+
+.table-display tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table-display tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table-display tbody tr:last-of-type {
+  border-bottom: 5px solid #007fff;
 }
