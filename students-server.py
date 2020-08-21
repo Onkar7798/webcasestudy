@@ -51,5 +51,5 @@ def display():
 		return render_template("display-student.html", result=csv_reader, keys=keys)
 
 if __name__=="__main__":
-	app.run(debug=True)
+	app.run()
 
