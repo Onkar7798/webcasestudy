@@ -8,13 +8,13 @@
 	<div class="search" align="center">
 		<form action="" method="post">
 			<p style="font-family:sans-serif">Student ID</p>
-			<input type="text" name="id"><br>
+			<input type="text" name="id" required><br>
 			<input type="submit" class="submit" name="Submit">
 		</form>
 		{% with messages = get_flashed_messages() %}
 			{% if messages %}
 				{% for message in messages %}
-					<p>{{messages}}</p>
+					<p>{{message}}</p>
 				{% endfor %}
 			{% endif %}
 		{% endwith %}

@@ -35,10 +35,7 @@ def search():
 					details = line
 					success = True
 		if not success:
-			if id[0] == '':
-				flash("Please Enter ID", "info")
-			else:
-				flash(f"Student ID: {id[0]} not found, Please try again!", "info")
+			flash(f"Student ID: {id[0]} not found, Please try again!", "info")
 		else:	
 			result = dict(zip(keys, details))
 			return render_template("search-student.html", data=True, result=result)
@@ -47,8 +44,14 @@ def search():
 @app.route("/display")
 def display():
 	with open('students.csv', 'r') as csv_file:
-		csv_reader = csv.reader(csv_file)
-		return render_template("display-student.html", result=csv_reader, keys=keys)
+		csv_reader = list(csv.reader(csv_file))
+		temp = csv_reader.copy()
+		if len(list(temp)) == 0:
+			flash("No Students to Display", "info")
+			return render_template("display-student.html", result="", keys="")
+		else:
+			print(len(list(temp)))
+			return render_template("display-student.html", result=csv_reader, keys=keys)
 
 if __name__=="__main__":
 	app.run()

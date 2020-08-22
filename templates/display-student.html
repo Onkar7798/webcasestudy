@@ -8,8 +8,8 @@
 	<div id="list" align="center">
 		<table class="table-display" border="1">
 			<tr>
-				{% for i in keys %}
-					<th>{{i}}</th>
+				{% for key in keys %}
+					<th>{{key}}</th>
 				{% endfor %}
 			</tr>
 			{% for lines in result %}
@@ -20,6 +20,13 @@
 				</tr>
 			{% endfor %}
 		</table>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<p style="color:#000000";>{{message}}</p>
+				{% endfor %}
+			{% endif %}
+			{% endwith %}
 		<button class="submit" onclick="window.location='/'">Home</button>
 	</div>
 </body>
