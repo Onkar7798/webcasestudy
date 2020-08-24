@@ -6,13 +6,13 @@
 </head>
 <body>
 	<div id="list" align="center">
-		<table class="table-display" border="1">
+		<table class="table-display">
 			<tr>
-				{% for key in keys %}
+				{% for key in result[0] %}
 					<th>{{key}}</th>
 				{% endfor %}
 			</tr>
-			{% for lines in result %}
+			{% for lines in result[1:] %}
 				<tr>
 					{% for value in lines %}
 						<td>{{value}}</td>

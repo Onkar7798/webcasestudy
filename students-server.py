@@ -1,7 +1,6 @@
 from flask import *
 import csv
 
-keys = ['Student ID', 'Student Name', 'Gender', 'Date of Birth', 'City', 'State', 'Email ID', 'Qualification', 'Stream']
 app = Flask(__name__)
 app.secret_key = "wubbalubbadubdub"
 
@@ -16,7 +15,7 @@ def add():
 		result = list(request.form.values());
 		split = result[3].split('-')
 		result[3] = split[2]+"-"+split[1]+"-"+split[0]
-		with open('students.csv', 'a', newline='\n') as csv_file:
+		with open('students.csv', 'a', newline='') as csv_file:
 			csv_writer = csv.writer(csv_file)
 			csv_writer.writerow(result)
 			flash("Student added to the Database!")
@@ -48,11 +47,16 @@ def display():
 		temp = csv_reader.copy()
 		if len(list(temp)) == 0:
 			flash("No Students to Display", "info")
-			return render_template("display-student.html", result="", keys="")
+			return render_template("display-student.html", result="")
 		else:
 			print(len(list(temp)))
-			return render_template("display-student.html", result=csv_reader, keys=keys)
+			return render_template("display-student.html", result=csv_reader)
 
 if __name__=="__main__":
+	keys=[]
+	with open('students.csv', 'r') as csv_file:
+		csv_reader = csv.DictReader(csv_file)
+		keys = csv_reader.fieldnames
+		print(keys)
 	app.run(debug=True)
 

@@ -7,7 +7,7 @@ body{
 	color: white;
 	font-family: sans-serif;
 	align-self: center;
-	width: 1000px;
+	width: 1020px;
 	margin: 100px auto;
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0,0,0,2);
@@ -127,5 +127,5 @@ body{
 }
 
 .table-display tbody tr:last-of-type {
-  border-bottom: 5px solid #007fff;
+  border-bottom: 2px solid #007fff;
 }
