@@ -7,11 +7,11 @@ body{
 	color: white;
 	font-family: sans-serif;
 	align-self: center;
+	text-align: center;
 	width: 1020px;
 	margin: 100px auto;
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0,0,0,2);
-
 }
 .button{
 	background: white;
@@ -36,8 +36,9 @@ body{
 	font-family: sans-serif;
 	background: #e6e6e6;
 	color: black;
-	width: 300px;
-	align-self: center;
+	width: 250px;
+	align-self: left;
+	text-align: left;	
 	margin: 100px auto;
 	padding: 10px;
 	border-radius: 10px;
@@ -94,6 +95,7 @@ body{
 .table-search tbody tr:last-of-type {
 	border-bottom: 2px solid #007fff;
 }
+
 
 .table-display{
 	border-collapse: collapse;
