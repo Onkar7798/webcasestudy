@@ -53,10 +53,14 @@ def display():
 			return render_template("display-student.html", result=csv_reader)
 
 if __name__=="__main__":
+<<<<<<< HEAD
 	keys=[]
 	with open('students.csv', 'r') as csv_file:
 		csv_reader = csv.DictReader(csv_file)
 		keys = csv_reader.fieldnames
 		print(keys)
 	app.run(debug=True)
+=======
+	app.run()
+>>>>>>> c00cceabf18bca2f5dc772d234323bb4fae46c7a
 
