@@ -8,6 +8,17 @@ body{
 	font-family: sans-serif;
 	align-self: center;
 	text-align: center;
+	width: 400px;
+	margin: 100px auto;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,2);
+}
+#display-list{
+	background: #e6e6e6;
+	color: white;
+	font-family: sans-serif;
+	align-self: center;
+	text-align: center;
 	width: 1020px;
 	margin: 100px auto;
 	border-radius: 10px;
